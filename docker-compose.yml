@@ -11,7 +11,7 @@ services:
     restart: always
     tty: true
     volumes:
-      - ./.local/prometheus:/prometheus
+      - ./.local/data/prometheus:/prometheus
       - ./prometheus.yml:/etc/prometheus/prometheus.yml
     ports:
       - 9090:9090
