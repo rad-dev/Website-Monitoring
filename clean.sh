@@ -1,4 +1,4 @@
-pkill blackbox_exp
-rm -rf output.log
-docker-compose down -v
-rm -rf provisioning
+sudo pkill blackbox_exp
+sudo rm -rf output.log
+sudo docker-compose down -v
+sudo rm -rf provisioning

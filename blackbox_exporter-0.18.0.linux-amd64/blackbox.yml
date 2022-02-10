@@ -8,4 +8,8 @@ modules:
     prober: http
     http:
       method: POST
-
+  http_404:
+    prober: http
+    http:
+      method: GET
+      valid_status_codes: [404]

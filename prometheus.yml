@@ -13,17 +13,17 @@ scrape_configs:
   - job_name: 'blackbox'
     metrics_path: /probe
     params:
-        module: [http_2xx]
+        module: [http_404]
     static_configs:
         - targets:
-            - https://github.com
-            - https://google.com
-            - https://hackerrank.com
+            - https://hbogo.globe.com.ph
+            - https://amazonprimevideo.globe.com.ph
+            - https://amazonkindleunlimited.globe.com.ph
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
       - source_labels: [__param_target]
         target_label: instance
       - target_label: __address__
-        replacement: 192.168.198.131:9115  # The blackbox exporter's real hostname:port.
+        replacement: 172.18.237.157:9115  # The blackbox exporter's real hostname:port.
 
