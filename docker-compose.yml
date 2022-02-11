@@ -26,6 +26,10 @@ services:
     environment:
       - GF_AUTH_PROXY_ENABLED=true
       - GF_PATHS_PROVISIONING=/var/lib/grafana/provisioning/
+      - GF_SMTP_ENABLED=true
+      - GF_SMTP_HOST=smtp.example.com ### EDIT
+      - GF_SMTP_USER=myuser ### EDIT
+      - GF_SMTP_PASSWORD=mysecret ### EDIT
     volumes:
       - .local/data/grafana:/var/lib/grafana
     ports:
