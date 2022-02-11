@@ -30,6 +30,7 @@ services:
       - GF_SMTP_HOST=${GF_SMTP_HOST}
       - GF_SMTP_USER=${GF_SMTP_USER}
       - GF_SMTP_PASSWORD=${GF_SMTP_PASSWORD}
+      - GF_SMTP_FROM_ADDRESS=${GF_SMTP_FROM_ADDRESS}
     volumes:
       - .local/data/grafana:/var/lib/grafana
     ports:
